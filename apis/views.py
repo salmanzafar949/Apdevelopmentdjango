@@ -1,12 +1,13 @@
-# from rest_framework import generics
+from rest_framework import generics
 from .models import Article
 from .serializers import ArticleSerializers
 from rest_framework import viewsets
-
+from rest_framework.response import Response
 
 class ArticleViewSet(viewsets.ModelViewSet):
     serializer_class = ArticleSerializers
     queryset = Article.objects.all()
+
 
 #
 #
